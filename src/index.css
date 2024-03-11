@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+}
+@layer base{
+    .img{
+        @apply w-[200px]
+    }
+    .anim-button{
+        @apply px-3 py-2 bg-[#41B771] text-white mt-3 rounded-sm tracking-wide
+    }
+}
+
+::-webkit-scrollbar{
+    appearance: none;
+    display: none;
+}
