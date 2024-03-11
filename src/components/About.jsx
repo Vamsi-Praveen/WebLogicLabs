@@ -1,9 +1,9 @@
 import React from 'react'
 import Img from '../assets/about.jpg'
-import { motion, spring } from 'framer-motion'
+import { motion } from 'framer-motion'
 const About = () => {
   return (
-    <div className='bg-[#FAF9F7] flex w-full md:gap-15 py-[30px] overflow-hidden md:flex-row flex-col items-centet justify-center'>
+    <div className='bg-[#FAF9F7] flex w-full md:gap-15 py-[30px] overflow-hidden md:flex-row flex-col items-centet justify-center' id="about">
       <motion.div className="md:w-1/2 flex items-center justify-center"
         initial={{ x: -40, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}

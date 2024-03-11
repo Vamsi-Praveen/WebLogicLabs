@@ -1,15 +1,14 @@
-import React from 'react'
-import SwiperCard from './SwiperCard'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
-import 'swiper/swiper-bundle.css';
+import { motion } from "framer-motion";
+import React from 'react';
 import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
 import { ClientReviewsData } from '../constants/data';
-import { motion } from "framer-motion"
+import SwiperCard from './SwiperCard';
 
 const ClientReviews = () => {
     return (
-        <div className='flex px-5 py-10 w-full items-center justify-center bg-[#fcf7f4] flex-col gap-7'>
+        <div className='flex px-5 py-10 w-full items-center justify-center bg-[#edf8f4] flex-col gap-7'>
             <motion.h1 className='font-bold text-2xl'
                 initial={{ y: -10, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -18,9 +17,13 @@ const ClientReviews = () => {
                     duration: 0.4
                 }}
             >Happy <span className='font-bold text-[#41B771]'>Clients</span> Says</motion.h1>
-            <div className='w-full flex flex-col md:flex-row'>
-                <Swiper pagination={true} modules={[Pagination]} className="mySwiper" slidesPerView={3} loop={true} spaceBetween={20}
-                    autoplay={{ delay: 1000 }}
+            <div className='w-full flex '>
+                <Swiper className="mySwiper" slidesPerView={1} spaceBetween={20} loop={true}
+                    breakpoints={{
+                        '768': {
+                            slidesPerView: 3
+                        }
+                    }}
                 >
                     {
                         ClientReviewsData.map((review, index) => {
@@ -32,7 +35,7 @@ const ClientReviews = () => {
 
                 </Swiper>
             </div>
-        </div>
+        </div >
     )
 }
 

@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 const SwiperCard = ({ review }) => {
     return (
-        <motion.div className='w-[450px] bg-white px-3 py-4 shadow-md rounded-md cursor-pointer border '
+        <motion.div className='w-[400px] h-[220px] bg-[#d6f1e7] px-3 py-4 shadow-md rounded-md cursor-pointer border '
             whileHover={{ scale: 1.05 }}
 
         >
